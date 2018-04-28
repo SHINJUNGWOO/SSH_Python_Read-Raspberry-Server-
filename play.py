@@ -18,7 +18,7 @@ while True:
     stdin, stdout, stderr = ssh.exec_command(order.command)
 
     for line in stdout:
-        print(line)
+        print(line[:-1])
 
 
 ssh.close()

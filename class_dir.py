@@ -24,6 +24,14 @@ class commandline:
                 self.command = temp_dir
         elif self.command == "clear":
             sys("cls");
+        else:
+            if self.command_pipe:
+                temp_dir = "cd "
+                for dir in self.command_pipe:
+                    temp_dir = temp_dir + dir + "/"
+                temp_dir = temp_dir + ";"+self.command
+                self.command = temp_dir
+
 
     def file_read(self):
         temp="cd "
