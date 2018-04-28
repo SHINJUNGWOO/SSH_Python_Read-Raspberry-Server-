@@ -1,4 +1,4 @@
-import sys
+import os
 class commandline:
     def __init__(self):
         self.command_pipe=[]
@@ -23,7 +23,7 @@ class commandline:
                 temp_dir = temp_dir + ";ls"
                 self.command = temp_dir
         elif self.command == "clear":
-            sys("cls");
+            os.system("cls")
         else:
             if self.command_pipe:
                 temp_dir = "cd "
